@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подача заявки | InTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="Логотип InTech" width="120" height="60">
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#">Сведения об организации</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Учащимся</a></li>
+                        <li><a href="application.html" class="btn-primary">Хочу у вас учиться</a></li>
+                    </ul>
+                </nav>
+                <button class="btn-visually-impaired" aria-label="Версия для слабовидящих">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M17 12a5 5 0 0 0-5-5"></path>
+                        <path d="M12 17a5 5 0 0 0 5-5"></path>
+                        <path d="M21 12a9 9 0 0 0-9-9"></path>
+                        <path d="M12 21a9 9 0 0 0 9-9"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="application-main">
+        <div class="container">
+            <div class="application-header">
+                <h1>Подача заявки на обучение</h1>
+                <p>Заполните форму ниже, и мы свяжемся с вами для уточнения деталей</p>
+            </div>
+            
+            <form id="application-form" class="application-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="group">Группа*</label>
+                        <select id="group" name="group" required>
+                            <option value="">Выберите группу</option>
+                            <option value="1-4">1-4 класс (начальная школа)</option>
+                            <option value="5-9">5-9 класс (средняя школа)</option>
+                            <option value="10-11">10-11 класс (старшая школа)</option>
+                        </select>
+                        <div class="error-message" id="group-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direction">Направление углубленной подготовки*</label>
+                        <select id="direction" name="direction" required>
+                            <option value="">Выберите направление</option>
+                            <option value="math">Математика</option>
+                            <option value="programming">Программирование</option>
+                            <option value="robotics">Робототехника</option>
+                            <option value="ai">Искусственный интеллект</option>
+                            <option value="cybersecurity">Кибербезопасность</option>
+                        </select>
+                        <div class="error-message" id="direction-error"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Дополнительные услуги</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="service-art" name="services" value="art">
+                            <label for="service-art">Художественная деятельность</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="service-engineering" name="services" value="engineering">
+                            <label for="service-engineering">Конструкторская деятельность</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="service-sports" name="services" value="sports">
+                            <label for="service-sports">Спортивные секции</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="service-languages" name="services" value="languages">
+                            <label for="service-languages">Иностранные языки</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="parent-name">Имя родителя*</label>
+                        <input type="text" id="parent-name" name="parent-name" required minlength="3" placeholder="Иванова Мария Сергеевна">
+                        <div class="error-message" id="parent-name-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон для связи*</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 999-99-99" required>
+                        <div class="error-message" id="phone-error"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="call-time">Желаемая дата и время звонка</label>
+                    <input type="datetime-local" id="call-time" name="call-time">
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn-primary btn-large">Отправить заявку</button>
+                    <p class="form-note">* Поля, обязательные для заполнения</p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <div id="success-message" class="success-message">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <span>Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</span>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="Логотип InTech" width="150" height="75">
+                    <p>Дети - наше будущее!</p>
+                </div>
+                <div class="footer-contacts">
+                    <h3>Контакты</h3>
+                    <p>г. Москва, ул. Техническая, 15</p>
+                    <p>Телефон: +7 (495) 123-45-67</p>
+                    <p>Email: info@intech-school.ru</p>
+                </div>
+                <div class="footer-menu">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#">Сведения об организации</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Учащимся</a></li>
+                        <li><a href="application.html">Подать заявку</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Лицей информационных технологий "InTech". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
