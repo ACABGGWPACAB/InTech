@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лицей информационных технологий InTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="Логотип InTech" width="120" height="60">
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#">Сведения об организации</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Учащимся</a></li>
+                        <li><a href="application.html" class="btn-primary">Хочу у вас учиться</a></li>
+                    </ul>
+                </nav>
+                <button class="btn-visually-impaired" aria-label="Версия для слабовидящих">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M17 12a5 5 0 0 0-5-5"></path>
+                        <path d="M12 17a5 5 0 0 0 5-5"></path>
+                        <path d="M21 12a9 9 0 0 0-9-9"></path>
+                        <path d="M12 21a9 9 0 0 0 9-9"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-slider">
+            <div class="slider-container">
+                <div class="slide active">
+                    <img src="images/slider1.jpg" alt="Современные классы лицея">
+                    <div class="slide-caption">
+                        <h2>Современное образование для цифрового будущего</h2>
+                        <p>Оснащенные классы с новейшим оборудованием</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slider2.jpg" alt="Ученики работают над проектом">
+                    <div class="slide-caption">
+                        <h2>Проектная деятельность и практические навыки</h2>
+                        <p>Реальные IT-проекты уже со школьной скамьи</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slider3.jpg" alt="Выпускники лицея">
+                    <div class="slide-caption">
+                        <h2>Успешные выпускники - наша гордость</h2>
+                        <p>95% выпускников поступают в ведущие IT-вузы</p>
+                    </div>
+                </div>
+                <div class="slider-dots"></div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают InTech?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Углубленное изучение</h3>
+                        <p>Математика, информатика и ИКТ с 1 по 11 класс</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍💻</div>
+                        <h3>IT-специализации</h3>
+                        <p>Программирование, робототехника, кибербезопасность</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Творческое развитие</h3>
+                        <p>Художественные и конструкторские студии</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="goals">
+            <div class="container">
+                <h2 class="section-title">Наши цели</h2>
+                <div class="goals-content">
+                    <div class="goals-text">
+                        <p>Лицей InTech создает условия для раскрытия потенциала каждого ребенка, формируя у учащихся системное мышление и навыки, необходимые в цифровую эпоху.</p>
+                        <ul class="goals-list">
+                            <li>Качественное образование с углубленным изучением точных наук</li>
+                            <li>Развитие критического и креативного мышления</li>
+                            <li>Подготовка к профессиям будущего</li>
+                            <li>Формирование цифровой грамотности</li>
+                        </ul>
+                        <a href="application.html" class="btn-primary">Подать заявку</a>
+                    </div>
+                    <div class="goals-image">
+                        <img src="images/classroom.jpg" alt="Класс лицея" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <div class="container">
+                <h2 class="section-title">Последние новости</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="images/news1.jpg" alt="Олимпиада по программированию" loading="lazy">
+                            <time datetime="2023-06-15">15 июня 2023</time>
+                        </div>
+                        <div class="news-content">
+                            <h3>Победа на городской олимпиаде</h3>
+                            <p>Наши ученики заняли 3 призовых места на городской олимпиаде по программированию среди учащихся 8-11 классов.</p>
+                            <a href="#" class="btn-secondary">Читать новость</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="images/news2.jpg" alt="Новые лаборатории" loading="lazy">
+                            <time datetime="2023-05-28">28 мая 2023</time>
+                        </div>
+                        <div class="news-content">
+                            <h3>Открытие новых лабораторий</h3>
+                            <p>В лицее открылись новые лаборатории робототехники и искусственного интеллекта, оснащенные современным оборудованием.</p>
+                            <a href="#" class="btn-secondary">Читать новость</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="Логотип InTech" width="150" height="75">
+                    <p>Дети - наше будущее!</p>
+                </div>
+                <div class="footer-contacts">
+                    <h3>Контакты</h3>
+                    <p>г. Москва, ул. Техническая, 15</p>
+                    <p>Телефон: +7 (495) 123-45-67</p>
+                    <p>Email: info@intech-school.ru</p>
+                </div>
+                <div class="footer-menu">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#">Сведения об организации</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Учащимся</a></li>
+                        <li><a href="application.html">Подать заявку</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Лицей информационных технологий "InTech". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
